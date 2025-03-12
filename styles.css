@@ -1,0 +1,52 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+p {
+    line-height: 1.6;
+    margin: 10px 0;
+}
+
+.dropdown {
+   width: 30%;
+   padding: 15px;
+   margin: 0px 0;
+   font-size: 24px;
+   height: auto;
+}
+
+body {
+    text-align: center; 
+    margin: 10px;
+    background-color: rgb(182, 182, 182); 
+    font-family: Verdana, Geneva, Tahoma, sans-serif
+}
+
+button {
+    background-color: #ff8800;
+    color: white;
+    padding: 5px 5px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+}
+
+button:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+    background-color: #ff9318;
+}
+
+footer {
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    position:fixed;
+    bottom: 5px;
+    width: 100%;
+    text-align: left;
+    padding-left: 10px;
+}

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Naming System</title>
+    <script src="scripts.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+
+<body>
+<h1>Files Naming System Example<br> <sub><small>V.1.0.0</small></sub></h1>
+<h4>File Name Logic Example</h4>
+
+<p>Customer: </p>
+<input type="text" id="customer" placeholder="Enter the Customer Name" style="width: 30%; padding: 15px; font-size: 24; height: auto;">
+
+<p>Market: </p> 
+<select name="market" id="market" class="dropdown" style="width: 30%; padding: 15px; margin: 0px 0; font-size: 24; height: auto;">
+    <option value="00">None</option>
+    <option value="01">Axles</option>
+    <option value="02">Off Highway</option>
+    <option value="03">Food and Bev</option>
+    <option value="04">Steel</option>
+  </select>
+
+<p>Work Effort</p>
+<select name="Work" id="work" class="dropdown" style="width: 30%; padding: 15px; margin: 0px 0; font-size: 24; height: auto;">
+    <option value="Error">None</option>
+    <option value="Visual_Inspection_Report">Visual Inspection Report</option>
+    <option value="Damage_Analysis">Damage analysis</option>
+    <option value="QIM_Investigation">QIM Investigation</option>
+  </select>
+
+<p>Product Type: </p>
+<select name="product" id="product" class="dropdown" style="width: 30%; padding: 15px; margin: 0px 0; font-size: 24; height: auto;">
+    <option value="00">None</option>
+    <option value="01">Taper Roller Bearing</option>
+    <option value="02">Cylindrical roller bearing</option>
+    <option value="03">Spherical roller bearing</option>
+  </select>
+<br>
+
+<p>Country: </p>
+<select name="country" id="country" class="dropdown" style="width: 30%; padding: 15px; margin: 0px 0; font-size: 24; height: auto;">
+    <option value="Error">None</option>
+    <option value="UK">United Kingdom</option>
+    <option value="DE">Germany</option>
+    <option value="US">USA</option>
+  </select>
+<br>
+
+<button onclick="printSelections()" style="margin: 20px; width: 200px; height: 50px;">Create File Name</button>
+<button onclick="clearOutput()" style="margin: 20px; width: 200px; height: 50px;">Clear Part Number</button>
+<p id="output" style="margin: 10px 0;"></p>
+
+<style>
+    #output {
+        min-height: 70px;
+    }
+</style>
+<p style="text-decoration: underline;">File name Logic:<br>
+    <p>File Name = Customer + Work Effort + ID Number <br>
+    ID Number = Year + Month + Market + Product type + Random 3 numbers + Conutry Code
+</p>
+
+<footer>
+    <p>Created by James Lamming <a href="mailto:james.lamming@timken.com">Contact</a></p>
+</body>
+</html>
