@@ -13,17 +13,16 @@ function clearOutput() {
 }
 
 function printSelections() {
-    const Customer = document.getElementById('customer').value;
-    const market = document.getElementById('market').value;
-    const work = document.getElementById('work').value;
+    const type = document.getElementById('type').value;
     const product = document.getElementById('product').value;
     const country = document.getElementById('country').value;
-
-    const output = `
-        <div style="font-weight: bold; color: black; font-size: 24px; border: 4px solid orange; padding: 10px; margin-right: 25%; margin-left: 25%; text-align: center;"> 
-            ${Customer.toUpperCase().replace(/ /g, '_')}_${work}_${window.thisyear + window.thismonth + market + product + window.getRandomNumber() + country}${".DOCX"}
-        </div>
-    `;
-
-    document.getElementById('output').innerHTML = output;
+    const description = document.getElementById('description').value;
+    if (description === "") {
+        const output = `Please write a Description`;
+        document.getElementById('output').innerHTML = output;
+    } else {
+        const output = `
+            ${type + country + description + "_" + product+ "_" + window.thisyear + window.thismonth + "_REV1.DOCX"}`;
+        document.getElementById('output').innerHTML = output;
+    }
 }
